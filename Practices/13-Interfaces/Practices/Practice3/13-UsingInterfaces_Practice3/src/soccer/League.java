@@ -13,10 +13,7 @@ import java.util.Collections;
 import java.util.StringTokenizer;
 import utility.PlayerDatabase;
 
-/**
- *
- * @author Administrator
- */
+ 
 public class League {
 
     /**

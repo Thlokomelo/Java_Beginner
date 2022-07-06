@@ -6,10 +6,6 @@
 
 package soccer;
 
-/**
- *
- * @author Administrator
- */
 public class Player {
     
     public String playerName;

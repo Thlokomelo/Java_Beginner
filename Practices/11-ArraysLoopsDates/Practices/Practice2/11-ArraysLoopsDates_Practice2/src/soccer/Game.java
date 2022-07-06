@@ -10,10 +10,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import utility.GameUtils;
 
-/**
- *
- * @author Administrator
- */
+
 public class Game {
     
     private Team homeTeam;

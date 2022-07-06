@@ -12,10 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import soccer.*;
 
-/**
- *
- * @author ksomervi
- */
+
 public class GameUtils {
 
     public static void addGameGoals(Game currGame) {

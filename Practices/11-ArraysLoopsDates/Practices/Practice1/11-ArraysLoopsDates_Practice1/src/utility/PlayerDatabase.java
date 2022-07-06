@@ -10,11 +10,6 @@ import java.util.*;
 import soccer.Player;
 
 
-
-/**
- *
- * @author Administrator
- */
 public class PlayerDatabase {
     
     private ArrayList <Player> players;

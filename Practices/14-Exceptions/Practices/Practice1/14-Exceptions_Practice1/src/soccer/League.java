@@ -14,10 +14,7 @@ import java.util.StringTokenizer;
 import utility.PlayerDatabase;
 import utility.PlayerDatabaseException;
 
-/**
- *
- * @author Administrator
- */
+
 public class League {
 
     /**

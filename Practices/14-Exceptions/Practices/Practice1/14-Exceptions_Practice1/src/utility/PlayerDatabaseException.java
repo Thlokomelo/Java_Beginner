@@ -6,10 +6,6 @@
 
 package utility;
 
-/**
- *
- * @author ksomervi
- */
 public class PlayerDatabaseException extends Exception{
     
     public PlayerDatabaseException(String message){

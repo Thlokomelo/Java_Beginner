@@ -6,10 +6,7 @@
 
 package soccer;
 
-/**
- *
- * @author ksomervi
- */
+
 public abstract class GameEvent {
     
     private Team theTeam;

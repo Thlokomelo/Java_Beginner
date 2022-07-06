@@ -11,10 +11,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 
-/**
- *
- * @author Administrator
- */
 public class Game {
     
     private Team homeTeam;

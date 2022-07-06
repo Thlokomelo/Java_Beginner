@@ -6,10 +6,7 @@
 
 package soccer;
 
-/**
- *
- * @author Administrator
- */
+
 public class Team implements Comparable {
     
     private String teamName;

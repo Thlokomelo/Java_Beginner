@@ -5,11 +5,7 @@
  */
 package soccer;
 
-
-/**
- *
- * @author Administrator
- */
+ 
 public class League {
 
     /**

@@ -8,10 +8,6 @@ package soccer;
 
 import utility.GameUtils;
 
-/**
- *
- * @author Administrator
- */
 public class Game {
     
     public Team homeTeam;

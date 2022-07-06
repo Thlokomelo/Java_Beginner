@@ -9,10 +9,7 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 import utility.PlayerDatabase;
 
-/**
- *
- * @author Administrator
- */
+
 public class League {
 
     /**

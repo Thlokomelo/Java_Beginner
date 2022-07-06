@@ -6,10 +6,7 @@
 
 package soccer;
 
-/**
- *
- * @author Administrator
- */
+
 public class Goal {
     
     public Team theTeam;

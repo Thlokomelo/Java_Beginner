@@ -36,6 +36,8 @@ named args
 /* System.out.println("Hello,World!"):
 - Statement that calls a method called println that belongs to the
 System.out object. Prints the string literal "Hello, World" to the console
+
+NB: In Java, most statements must end with semicolon (;)
 */
 
 

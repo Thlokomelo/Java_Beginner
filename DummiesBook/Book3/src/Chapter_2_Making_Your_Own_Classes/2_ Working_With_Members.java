@@ -37,27 +37,34 @@ Members of a class are fields and methods defined in the class body.
     NB: (Field cant be changed, customary to spell Final field names in 
          all capital letters, but not reauired)
 
+- Understanding methods
+
+  » To declare a method that’s available to users of your class, add the public
+    keyword to the method declaration:
+
+    public boolean isActive()
+      {
+        return this.isActive;
+      }
+
+  » To create a private method that can be used within the class but isn’t visible outside
+    the class, use the private keyword:
+
+     private void calculateLunarTrajectory()
+      {
+        // code to get the calculated lunar trajectory
+      }
+
+- Understanding visibility
+
+ » Public and private keywords indicate the visibility of the field or method.
+
+ » The combination of all the members that have public access is sometimes called
+   the public interface of your class.
+
+ » The term Expose is also used to refer to creation of puclic members. 
+   e.g. a class exposes xxxx method i.e. method is vailable to other classes.
 
 
+ */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/

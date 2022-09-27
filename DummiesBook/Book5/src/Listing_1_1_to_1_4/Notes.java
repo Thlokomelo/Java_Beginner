@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Chapter_1_Programming_Threads;
+package Listing_1_1_to_1_4;
 
 /*
 Page: 475
@@ -77,17 +77,66 @@ A Thread object is created that can run your Runnable class.
 The run method of your Runnable object is called and executes in a separate
 thread.
 
-see LaunchEvent class as an example.
+see LaunchEvent class as an example which uses version 2 of the CountDownApp class.
+
+Creating Threads that work together
+-----------------------------------
+
+See CountDownApp3 class which uses an interface as a buffer between the classes. This interface
+defines a method that gets the current status of the clock. Then the CountDown
+Clock class can implement this interface, and the LaunchEvent class can use any
+object that implements this interface to get the time.
+
+Using an Executor
+-----------------
+
+This is based on new advanced methods of thereading which uses Java 1.5 threading classes.
+See Listing 1.5 - 1.7 as examples
 
 
+Synchronizing Methods
+---------------------
+
+The key to handling concurrency issues is recognizing methods that update data
+and that might be called by more than one thread. After you identify those methods,
+the solution is simple. You just add the synchronized keyword to the method
+declaration, like this:
+
+public synchronized void someMethod()...
+
+This code tells Java to place a lock on the object so that no other methods can call
+any other synchronized methods for the object until this method finishes.
 
 
+See Listing 1.8 to 1.10 as examples.
 
+Creating a Lock
+---------------
 
+A Lock is  of Java version 1.5 new threading features. It can take the place of Java’s synchronized keyword, but a lock is much more versatile.
 
+See Listing 1.11 and 1.12 as examples
 
+Coping with Threadus Interruptus
+--------------------------------
 
+You can interrupt another thread by calling its interrupt method, provided that
+you have a reference to the thread, as in this example:
 
+t.interrupt();  //Here the thread referenced by the t variable is interrupted.
+
+- InterruptedException is thrown when another thread calls the interrupt
+  method on this thread while the thread is not executing.
+
+- The yield and sleep methods are one of the ways to take control of thread interrupters. 
+  Otherwise you can use the Interrupted flag and set it to indicate that the thread was interrupted.
+
+Aborting the countdown
+----------------------
+
+To illustrate how you can interrupt threads, Listing 1.13 shows yet another version
+of the countdown application. This version aborts the countdown if something
+goes wrong with any of the launch events.
 
 
 

@@ -212,7 +212,17 @@ Scene scene = new Scene(pane, 300, 250);  //accepts pane, width (pixels) and hei
 Setting the Stage
 -----------------
 
+If the scene represents the nodes (controls and layout panes) that are displayed by
+the application, the stage represents the window in which the scene is displayed.
 
+Example:
+
+primaryStage.setScene(scene);                  // Calls the setScene method of the primary stage to set the scene to be displayed.
+primaryStage.setTitle("The Click Me App");     // Sets the text displayed by the primaryStage
+primaryStage.show();                           //displays the window
+
+Examining the Click Counter Program
+-----------------------------------
 
 
 

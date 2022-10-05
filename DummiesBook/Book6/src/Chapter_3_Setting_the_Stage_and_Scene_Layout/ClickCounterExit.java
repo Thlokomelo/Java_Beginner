@@ -1,0 +1,96 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Chapter_3_Setting_the_Stage_and_Scene_Layout;
+
+/*
+Page: 
+
+This program shows a variation of the ClickCounter program that includes a Close
+button in addition to the Click Me! button. When the user clicks the Click Me!
+button, a message box displays to indicate how many times the button has been
+clicked. But when the user attempts to exit the program, whether by clicking the
+Close button or by simply closing the window, the ConfirmationBox class that
+was shown in Listing 3-3 is used to ask the user whether she really wants to exit
+the program. Then, the stage is closed only if the user clicks the Yes button in the
+confirmation box.
+
+ */
+
+import javafx.application.*;
+import javafx.stage.*;
+import javafx.scene.*;
+import javafx.scene.layout.*;
+import javafx.scene.control.*;
+import javafx.geometry.*;
+import java.util.*;
+
+public class ClickCounterExit extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    Stage stage;
+    int iClickCount = 0;
+
+    @Override
+    public void start(Stage primaryStage) {
+        stage = primaryStage;
+
+        // Create the Click Me button
+        Button btnClickMe = new Button();
+        btnClickMe.setText("Click me please!");
+        btnClickMe.setOnAction(e -> btnClickMe_Click());
+
+        // Create the Close button
+        Button btnClose = new Button();
+        btnClose.setText("Close");
+        btnClose.setOnAction(e -> btnClose_Click());
+
+        // Add the buttons to a layout pane
+        VBox pane = new VBox(10);
+        pane.getChildren().addAll(btnClickMe, btnClose);
+        pane.setAlignment(Pos.CENTER);
+
+        // Add the layout pane to a scene
+        Scene scene = new Scene(pane, 250, 150);
+
+        // Finish and show the stage
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Click Counter");
+        primaryStage.setOnCloseRequest(e              //event handler conusmes the event then calls the btnClose_Click method
+                -> {
+            e.consume();
+            btnClose_Click();
+        });
+        primaryStage.show();
+    }
+
+    public void btnClickMe_Click() {
+        iClickCount++;
+        if (iClickCount == 1) {
+            Alert a = new Alert(Alert.AlertType.INFORMATION,
+                    "You have clicked once.");
+            a.showAndWait();
+        } else {
+            Alert a = new Alert(Alert.AlertType.INFORMATION,
+                    "You have clicked "
+                    + iClickCount + " times.");
+            a.showAndWait();
+        }
+    }
+
+    public void btnClose_Click() {
+        Alert a = new Alert(Alert.AlertType.CONFIRMATION,
+                "Are you sure you want to quit?",
+                ButtonType.YES, ButtonType.NO);
+        Optional<ButtonType> confirm = a.showAndWait();
+        if (confirm.isPresent() && confirm.get()
+                == ButtonType.YES) {
+            stage.close();
+        }
+    }
+
+}
